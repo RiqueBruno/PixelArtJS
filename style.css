@@ -24,4 +24,16 @@ body{
     font-size: 50px;
     font-family: magicFont;
     color: blueviolet;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+#color-palette{
+    width: 190px;  
+    margin: 0 auto;
+}    
+.color{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
 }
