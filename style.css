@@ -1,0 +1,27 @@
+body{
+    background-image: url(resources/bk.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: pink;
+    margin: 0;
+}
+@font-face {
+    font-family: magicFont;
+    src: url('resources/Fontby7Ntypes.otf') format('opentype'), url('resources/Fontby7Ntypes.otf') format('truetype');
+    font-weight: normal;
+}
+.mouse {
+    width: 20px;
+    height: 20px;
+    border-radius: 20%;
+    border: 1px solid black;
+    position: absolute;
+    pointer-events: none;
+}
+#title{
+    text-align: center;
+    font-size: 50px;
+    font-family: magicFont;
+    color: blueviolet;
+}
