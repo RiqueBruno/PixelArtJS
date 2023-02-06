@@ -28,7 +28,7 @@ body{
     margin-top: 2px;
 }
 #color-palette{
-    width: 190px;  
+    width: 180px;  
     margin: 0 auto;
 }    
 .color{
@@ -36,4 +36,17 @@ body{
     width: 40px;
     height: 40px;
     display: inline-block;
+}
+.color:hover{
+    scale: 110%;
+}
+#button-random-color{
+    text-align: center;
+    margin: 5px;
+    background-color: aquamarine;
+    border-radius: 10%;
+}
+#button-random-color:hover{
+    background-color: rgb(96, 247, 197);
+    cursor: pointer;
 }
