@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 body{
     background-image: url(resources/bk.jpg);
     background-attachment: fixed;
@@ -49,4 +52,11 @@ body{
 #button-random-color:hover{
     background-color: rgb(96, 247, 197);
     cursor: pointer;
+}
+#pixel-board{
+    background-color: aquamarine;
+    height: 202px;
+    width: 202px;
+    border: 2px solid darkblue;
+    margin: 0 auto;
 }
