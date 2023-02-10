@@ -86,19 +86,17 @@ body {
   justify-content: center; */
   display: flex;
   width: 210px;
-  flex-wrap:wrap;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
-  
 }
 
 .pixel {
-  background-color: white;
   height: 40px;
   width: 40px;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 #selected {
   background-color: black;
+  height: 20px;
 }
