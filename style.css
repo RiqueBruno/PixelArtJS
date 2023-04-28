@@ -1,30 +1,50 @@
 * {
   margin: 0;
   padding: 0;
+  background-attachment: fixed;
 }
 
 body {
-  background-color: pink;
-  background-image: url(resources/bk.jpg);
+  background-color: black;
+  background-image: url('resources/PixelArt8bitCity.gif');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
+  position: relative;
+  backdrop-filter: blur(8px);
+  height: 100vw;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(44, 0, 33, 0.575);
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(201, 5, 191);
+  border-radius: 20px;
 }
 
 @font-face {
   font-family: magicFont;
   src: url('resources/Fontby7Ntypes.otf') format('opentype'), url('resources/Fontby7Ntypes.otf') format('truetype');
-  /* stylelint-disable-next-line font-weight-notation */
-  font-weight: normal;
+  font-weight: 20;
 }
 
 .mouse {
   width: 20px;
   height: 20px;
   border-radius: 20%;
-  border: 1px solid black;
+  border: 1px solid rgb(253, 253, 253);
+  color: transparent;
   position: absolute;
   pointer-events: none;
+  z-index: 30000;
+  animation: lightColor2 3s infinite;
 }
 
 #selected {
@@ -36,15 +56,15 @@ body {
 #title {
   text-align: center;
   margin: 15px 20px;
-  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: magicFont;
-  color: blueviolet;
-  background-color: rgba(230, 37, 182, 0.233);
-  box-shadow: 0 0 5px rgb(121, 4, 115);
+  font-family: magicFont, sans-serif;
+  color: rgb(155, 49, 255);
+  background-color: rgba(255, 106, 218, 0.253);
+  box-shadow: 0 0 5px 3px rgb(240, 112, 233);
   animation: bg 10s infinite;
 }
 
 @keyframes bg {
+
   50% {
     color: crimson;
   }
@@ -56,19 +76,22 @@ body {
 }
 
 #color-palette {
-  width: 180px;
+  width: 50%;
   margin: 0 auto;
+  padding: 10px 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .color {
   width: 40px;
   height: 40px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(253, 194, 1);
   border-radius: 20%;
   cursor: pointer;
-  box-shadow: 0 0 5px rgb(36, 1, 41);
-  margin: 2px;
+  animation: lightColor 20s linear infinite;
+  margin: 2px 10px;
 }
 
 .color:hover {
@@ -87,26 +110,35 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 70px;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 10px 4px rgb(1, 248, 248);
   cursor: cell;
+  border: 5px solid rgb(255, 2, 158);
+  animation: rotate 7s linear infinite 1s;
 }
 
 #clear-board {
   cursor: pointer;
   background-color: rgb(250, 152, 152);
-  margin: 8px 2px;
+  margin: 20px 20px 8px;
   padding: 0 10px;
-  border-radius: 20%;
-  box-shadow: 0 0 5px black;
+  color: rgb(160, 0, 147);
+  font-size: 17px;
+  border: 1px solid rgba(250, 85, 214, 0.589);
+  border-radius: 20px;
+  animation: light3 6s linear 2s infinite;
 }
 
 #button-random-color {
   cursor: pointer;
   background-color: rgb(66, 250, 250);
-  margin: 8px 2px;
+  box-shadow: 0 0 10px 4px rgb(1, 248, 248);
+  margin: 20px 20px 8px;
   padding: 0 10px;
-  border-radius: 20%;
-  box-shadow: 0 0 5px black;
+  color: rgb(0, 62, 119);
+  font-size: 17px;
+  border: 1px solid rgba(1, 140, 165, 0.589);
+  border-radius: 20px;
+  animation: light 4s linear 10s infinite;
 }
 
 #clear-board:hover {
@@ -120,10 +152,13 @@ body {
 #generate-board {
   cursor: pointer;
   background-color: rgb(109, 250, 66);
-  margin: 8px 2px;
+  margin: 20px 20px 8px 0;
   padding: 0 10px;
-  border-radius: 20%;
-  box-shadow: 0 0 5px black;
+  color: rgb(0, 119, 40);
+  font-size: 17px;
+  border: 1px solid rgba(1, 165, 42, 0.589);
+  border-radius: 20px;
+  animation: light2 10s linear 2s infinite;
 }
 
 #generate-board:hover {
@@ -132,15 +167,102 @@ body {
 
 #board-size {
   background-color: rgb(109, 250, 66);
-  margin: 8px 2px;
+  margin: 20px 4px 8px 20px;
   padding: 0 10px;
-  color: rgb(0, 15, 4);
-  border-radius: 20%;
-  box-shadow: 0 0 5px black;
+  color: rgb(0, 119, 40);
+  font-size: 17px;
+  border: 1px solid rgba(1, 165, 42, 0.589);
+  border-radius: 20px;
+  animation: light2 10s linear 2s infinite;
 }
 
 #board-size:hover {
   background-color: rgb(190, 250, 172);
   scale: 110%;
   border-color: blueviolet;
+}
+
+@keyframes rotate {
+
+  0% { border-color: rgb(119, 0, 255); }
+
+  15% { border-color: rgb(0, 252, 0); }
+
+  33% { border-color: rgb(253, 4, 4); }
+
+  66% { border-color: rgb(255, 10, 222); }
+
+  75% { border-color: rgb(230, 255, 1); }
+
+  100% { border-color: blue; }
+}
+
+@keyframes light {
+
+  0% { box-shadow: 0 0 5px 4px rgb(1, 248, 248); }
+
+  25% { box-shadow: 0 0 10px 4px rgb(1, 248, 248); }
+
+  50% { box-shadow: 0 0 5px 4px rgb(1, 248, 248); }
+
+  75% { box-shadow: 0 0 10px 4px rgb(1, 248, 248); }
+
+  100% { box-shadow: 0 0 5px 4px rgb(1, 248, 248); }
+
+}
+
+@keyframes lightColor {
+
+  0% { box-shadow: 0 0 3px 4px rgba(255, 253, 143, 0.527); }
+
+  25% { box-shadow: 0 0 8px 4px rgba(255, 253, 143, 0.527); }
+
+  50% { box-shadow: 0 0 3px 4px rgba(255, 253, 143, 0.527); }
+
+  75% { box-shadow: 0 0 8px 4px rgba(255, 253, 143, 0.527); }
+
+  100% { box-shadow: 0 0 3px 4px rgba(255, 253, 143, 0.527); }
+
+}
+
+@keyframes lightColor2 {
+
+  0% { box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.527); }
+
+  25% { box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.527); }
+
+  50% { box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.527); }
+
+  75% { box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.527); }
+
+  100% { box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.527); }
+
+}
+
+@keyframes light2 {
+
+  0% { box-shadow: 0 0 3px 4px rgb(1, 248, 63); }
+
+  25% { box-shadow: 0 0 8px 4px rgb(1, 248, 63); }
+
+  50% { box-shadow: 0 0 3px 4px rgb(1, 248, 63); }
+
+  75% { box-shadow: 0 0 8px 4px rgb(1, 248, 63); }
+
+  100% { box-shadow: 0 0 3px 4px rgb(1, 248, 63); }
+
+}
+
+@keyframes light3 {
+
+  0% { box-shadow: 0 0 3px 4px rgb(252, 171, 171); }
+
+  25% { box-shadow: 0 0 8px 4px rgb(252, 171, 171); }
+
+  50% { box-shadow: 0 0 3px 4px rgb(252, 171, 171); }
+
+  75% { box-shadow: 0 0 8px 4px rgb(252, 171, 171); }
+
+  100% { box-shadow: 0 0 3px 4px rgb(252, 171, 171); }
+
 }
