@@ -266,3 +266,120 @@ body::-webkit-scrollbar-thumb {
   100% { box-shadow: 0 0 3px 4px rgb(252, 171, 171); }
 
 }
+
+@media screen and (min-device-width: 600px) and ( max-width:1200px) {
+  body {
+    background-color: rgb(17, 0, 48);
+    background-size: 100% 100%;
+    width: 190%;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title {
+    width: 90%;
+    text-align: center;
+  }
+
+  .container, #header2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-device-width: 300px) and ( max-width: 599px) {
+  body {
+    background-color: rgb(17, 0, 48);
+    background-size: 100% 100%;
+    width: 190vh;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title {
+    width: 90%;
+    text-align: center;
+  }
+
+  .container, #header2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pixel-board {
+    margin: 2% auto;
+    box-shadow: none;
+  }
+
+  .color, #button-random-color, #generate-board, #board-size, #clear-board {
+    box-shadow: none;
+    animation: none;
+  }
+}
+
+@media screen and ( max-width: 299px) {
+
+  body {
+    background-color: rgb(17, 0, 48);
+    background-size: 100% 100%;
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #title {
+    width: 800px;
+    margin-left: 700px;
+    padding: 40px;
+  }
+
+  .container, #header2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container, #header2 {
+    width: 900px;
+  }
+
+  .color {
+    width: 50px;
+  }
+
+  #header2 {
+    margin: 0 auto;
+  }
+
+  #pixel-board {
+    margin: 2% auto;
+    box-shadow: none;
+  }
+
+  .color, #button-random-color, #generate-board, #board-size, #clear-board {
+    box-shadow: none;
+    animation: none;
+  }
+}
